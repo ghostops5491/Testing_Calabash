@@ -1,0 +1,17 @@
+start_test_server_in_background
+query ("*")
+exit
+query("UIView", :textContent)
+start_test_server_in_background
+query("UIView", :textContent)
+exit
+start_test_server_in_background
+query("* all css:'#id_name'")
+query("*")
+query("*", :id)
+exit
+start_test_server_in_background
+tap ' LOG IN '
+tap_mark ' LOG IN '
+query("*", :id)
+exit

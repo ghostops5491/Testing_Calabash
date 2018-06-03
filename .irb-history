@@ -1,17 +1,50 @@
-start_test_server_in_background
-query ("*")
-exit
-query("UIView", :textContent)
-start_test_server_in_background
-query("UIView", :textContent)
-exit
-start_test_server_in_background
-query("* all css:'#id_name'")
+query(id)
+query(*)
 query("*")
-query("*", :id)
+query("id")
+query("*",:id)
+exit
+query("*",:id)
 exit
 start_test_server_in_background
-tap ' LOG IN '
-tap_mark ' LOG IN '
-query("*", :id)
+tap_when_element_exists("Sign Up now!")
+start_test_server_in_background
+tap_when_element_exists("Sign Up now!")
+start_test_server_in_background
+element_exists("Sign Up now!")
+tap_when_element_exists("* Text:'Sign Up now!'")
+exit
+start_test_server_in_background
+touch("* text:'Sign Up now!'")
+query("*",:id)
+query("*")
+enter_text("* index:'15'","yash")
+enter_text("* index:15","yash")
+enter_text("* index:18","yash")
+enter_text("* index:21","yash")
+press_back_button
+enter_text("* index:21","yash")
+touch("* index:21")
+enter_text("* index:21","yash")
+touch("view")
+press_back_button
+enter_text("* index:21","yash")
+press_back_button
+touch("view")exit
+exit
+start_test_server_in_background
+tap_when_element_exists("* text:'Sign Up now!'")
+enter_text("* index:18","yashchaurasia999@gmail.com")
+hide_soft_keyboard
+enter_text("* index:21","yashchaurasia999@gmail.com")
+touch("* index:21")
+keyboard_enter_text("yashchaurasia999@gmail.com")
+hide_soft_keyboard
+
+touch("* index:41")
+hide_soft_keyboard
+touch("* index:47")
+touch("* index:47")
+keyboard_enter_text("yashchaurasia999@gmail.com")
+hide_soft_keyboard
 exit

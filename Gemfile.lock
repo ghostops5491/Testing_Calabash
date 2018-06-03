@@ -77,6 +77,7 @@ PLATFORMS
 DEPENDENCIES
   calabash-android
   calabash-cucumber
+  json (~> 1.8, >= 1.8.6)
   parallel_calabash
 
 BUNDLED WITH

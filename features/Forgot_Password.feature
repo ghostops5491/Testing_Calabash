@@ -1,3 +1,4 @@
+@Forgot
 Feature: Forgot Password Feature
   
   @Forgot_Password

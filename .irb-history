@@ -1,50 +1,50 @@
-query(id)
-query(*)
+ tap_when_element_exists("* text:'Short Circuit'")
+flick("* text:'PHOTOS'",:up)
 query("*")
-query("id")
-query("*",:id)
-exit
-query("*",:id)
-exit
+ tap_when_element_exists("* id:'NoResourceEntry-204'")
+ tap_when_element_exists("* text:' CAPTURE '")
+ tap_when_element_exists("* text:'CAPTURE'")
 start_test_server_in_background
-tap_when_element_exists("Sign Up now!")
 start_test_server_in_background
-tap_when_element_exists("Sign Up now!")
 start_test_server_in_background
-element_exists("Sign Up now!")
-tap_when_element_exists("* Text:'Sign Up now!'")
 exit
 start_test_server_in_background
-touch("* text:'Sign Up now!'")
-query("*",:id)
+ tap_when_element_exists("* text:'ELECTRICIAN'")
+ tap_when_element_exists("* text:' IMMEDIATE '")
+ tap_when_element_exists("* text:'Select street address and unit'")
+ tap_when_element_exists("* text:'St Lane'")
+ tap_when_element_exists("* text:' NEXT '")
+ tap_when_element_exists("* text:'Please select...'")
+ tap_when_element_exists("* text:'Short Circuit'")
+ tap_when_element_exists("* id:'NoResourceEntry-204'")
+flick("* text:'PHOTOS'",:up)
+ tap_when_element_exists("* id:'NoResourceEntry-204'")
 query("*")
-enter_text("* index:'15'","yash")
-enter_text("* index:15","yash")
-enter_text("* index:18","yash")
-enter_text("* index:21","yash")
-press_back_button
-enter_text("* index:21","yash")
-touch("* index:21")
-enter_text("* index:21","yash")
-touch("view")
-press_back_button
-enter_text("* index:21","yash")
-press_back_button
-touch("view")exit
+ tap_when_element_exists("* id:'NoResourceEntry-258'")
+ tap_when_element_exists("* text:'CAPTURE'")
+ tap_when_element_exists("* text:'CONFIRM'")
+query("*")
+perform_action('drag', 50, 50, 60, 80, 10)
+perform_action('drag', 50, 50, 60, 120, 10)
+perform_action('drag', 50, 50, 60, 120, 8)
+perform_action('drag', 50, 50, 60, 120, 8)
+perform_action('drag', 50, 50, 120, 60, 8)
+perform_action('drag', 5, 5, 120, 60, 8)
+perform_action('drag', 5, 5, 180, 60, 8)
+perform_action('drag', 500, 500, 1475, 1400, 8)
+perform_action('drag', 500, 500, 1475, 1400, 8)
+perform_action('drag', 500, 500, 1475, 3400, 8)
+perform_action('drag', 500, 500, 1475, 1300, 8)
+perform_action('drag_coordinates', 500, 500, 1475, 1300, 8)
+scroll("scrollView index:0",:down)
+scroll("ReactScrollView index:7",:down)
+scroll("ReactScrollView index:75",:down)
+scroll("ReactScrollView index:15",:down)
+scroll("ReactScrollView index:8",:up)
+scroll("ReactScrollView index:7",:up)
+performAction('drag',50,50,50,20,5)
 exit
 start_test_server_in_background
-tap_when_element_exists("* text:'Sign Up now!'")
-enter_text("* index:18","yashchaurasia999@gmail.com")
-hide_soft_keyboard
-enter_text("* index:21","yashchaurasia999@gmail.com")
-touch("* index:21")
-keyboard_enter_text("yashchaurasia999@gmail.com")
-hide_soft_keyboard
-
-touch("* index:41")
-hide_soft_keyboard
-touch("* index:47")
-touch("* index:47")
-keyboard_enter_text("yashchaurasia999@gmail.com")
-hide_soft_keyboard
+query("*")
+exiy
 exit

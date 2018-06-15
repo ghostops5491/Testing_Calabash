@@ -48,5 +48,5 @@ Feature: Login with valid credential
 @Login_Valid
   Scenario: As a valid user I can log into JOI Customer app
     When User enters "yash.aventador.lambo@gmail.com" "yashchaurasia" credentials
-    And User press " LOG IN " 
+    And User press " LOG IN "
     Then User see "WHAT DO YOU NEED HELP WITH?"

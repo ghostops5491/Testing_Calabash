@@ -94,4 +94,91 @@ Scenario: Sign up valid
   Then User press " ADD A PAYMENT METHOD " on
   Then User add card details "4111111111111111" "09" "2021" "123"
   Then User press " SUBMIT "
-  Then User see "Find a qualified service provider now!"  
+  Then User see "Find a qualified service provider now!"
+  
+ @Sign_Up_Invalid_Phone
+Scenario: Sign up valid  
+  Given User is on sign up screen
+  Then User enters "yash.aventador.lambo@gmail.com" "yashchaurasia" "yashchaurasia" on sign up page
+  Then User press " SIGN UP "
+  Then User see "Please complete your profile." 
+  Then User press "Edit Photo" on
+  Then User press "CAPTURE" on
+  Then User press "RETAKE" on
+  Then User press "CAPTURE" on
+  Then User press "CONFIRM" on
+  Then User enters "123" "456" "123" on sign page
+  Then User press "DONE EDITING PROFILE" on
+  Then User see "Phone number is not valid"
+  
+  @Sign_Up_Invalid_Address
+Scenario: Sign up valid  
+  Given User is on sign up screen
+  Then User enters "yash.aventador.lambo@gmail.com" "yashchaurasia" "yashchaurasia" on sign up page
+  Then User press " SIGN UP "
+  Then User see "Please complete your profile." 
+  Then User press "Edit Photo" on
+  Then User press "CAPTURE" on
+  Then User press "RETAKE" on
+  Then User press "CAPTURE" on
+  Then User press "CONFIRM" on
+  Then User enters "123" "456" "1234567890" on sign page
+  Then User press " ADD A SERVICE ADDRESS + "
+  Then User enters "" "" "Atlanta" "GA" "30301" in address
+  Then User press "CONFIRM ADDITION"
+  Then User see "Street cannot be empty"
+  Then User enters "St Lane" "" "" "GA" "30301" in address
+  Then User press "CONFIRM ADDITION"
+  Then User see "City cannot be empty"
+  Then User enters "St Lane" "" "Atlanta" "" "30301" in address
+  Then User press "CONFIRM ADDITION"
+  Then User see "State cannot be empty"
+  Then User enters "St Lane" "" "Atlanta" "GA" "" in address
+  Then User press "CONFIRM ADDITION"
+  Then User see "Zipcode cannot be empty"
+  
+@Sign_Up_Invalid_Card
+Scenario: Sign up valid  
+  Given User is on sign up screen
+  Then User enters "yash.aventador.lambo@gmail.com" "yashchaurasia" "yashchaurasia" on sign up page
+  Then User press " SIGN UP "
+  Then User see "Please complete your profile." 
+  Then User press "Edit Photo" on
+  Then User press "CAPTURE" on
+  Then User press "RETAKE" on
+  Then User press "CAPTURE" on
+  Then User press "CONFIRM" on
+  Then User enters "123" "456" "1234567890" on sign page
+  Then User press " ADD A SERVICE ADDRESS + "
+  Then User enters "St Lane" "" "Atlanta" "GA" "30301" in address
+  Then User press "CONFIRM ADDITION"
+  Then User press "DONE EDITING PROFILE" on
+  Then User see "Please add at least one debit/credit card."
+  Then User press " ADD A PAYMENT METHOD " on
+  Then User add card details "1234567890123" "09" "2021" "123"
+  Then User press " SUBMIT "
+  Then User see "Your card number is incorrect"
+  Then User add card details "" "09" "2021" "123"
+  Then User press " SUBMIT "
+  Then User see "please enter a valid card number"
+  Then User add card details "4111111111111111" "" "2021" "123"
+  Then User press " SUBMIT "
+  Then User see "Please enter a valid expiry month"
+  Then User add card details "4111111111111111" "21" "2021" ""
+  Then User press " SUBMIT "
+  Then User see "Please enter a valid expiry month"   
+  Then User add card details "4111111111111111" "09" "" "123"
+  Then User press " SUBMIT "
+  Then User see "Please enter a valid expiry year"
+  Then User add card details "4111111111111111" "09" "2017" "123"
+  Then User press " SUBMIT "
+  Then User see "Please enter a valid expiry year"
+  Then User add card details "4111111111111111" "09" "2021" ""
+  Then User press " SUBMIT "
+  Then User see "Please enter a valid cvc"
+  Then User add card details "4111111111111111" "09" "2021" "abc"
+  Then User press " SUBMIT "
+  Then User see "Please enter a valid cvc"
+  
+  
+  

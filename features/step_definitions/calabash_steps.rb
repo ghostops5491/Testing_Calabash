@@ -105,7 +105,7 @@ sleep 2
 end
 
 Then(/^User enter notes "([^"]*)"$/) do |arg1|
-	tap_when_element_exists("* id:'NoResourceEntry-286'")
+	tap_when_element_exists("* id:'NoResourceEntry-286'") #or 287
 	keyboard_enter_text(arg1)
 	end
 
@@ -114,9 +114,17 @@ Then (/^User press on Attach Photos icon$/) do
 	tap_when_element_exists("* id:'NoResourceEntry-295'")
 end
 
-Then(/^User scroll down to press delete$/) do
+Then(/^User scroll down$/) do
 	perform_action('drag',50,50,50,20,5)
 	end
+
+Then(/^User press "([^"]*)" on text$/) do |arg|
+	tap_when_element_exists("* {text CONTAINS '#{arg}'}")
+end	
+
+Then(/^User flick "([^"]*)"$/) do |arg|
+	flick("* text:'#{arg}'",:up)
+end
 
 Given(/^User is logged in$/) do
       element_exists("view")
